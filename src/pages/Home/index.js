@@ -52,9 +52,10 @@ export default function Home() {
     const response = await api.delete(`/delete-user?id=${_id}`);
     // console.log(response.data);
     if (response.data.error === false) {
+
       const newData = data.filter((item) => item._id !== _id);
       // console.log(newData);
-      setData(newData);
+      setData(response.data.info);
       cleanFields();
     }
   };
@@ -62,7 +63,7 @@ export default function Home() {
   const sendMail = async (newArray) => {
     // console.log(newArray)
     const response = await api.post("/send-mail", newArray);
-
+    // console.log(response.data.users)
     if (response.data.error === false) {
       setAlertEmail("E-mail's enviados");
       setData(response.data.users);
