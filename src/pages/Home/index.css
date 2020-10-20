@@ -1,0 +1,214 @@
+input {
+  cursor: pointer;
+}
+
+#box {
+  display: inline;
+  height: 100vh;
+}
+
+.container-left {
+  background: var(--color-background);
+  text-align: center;
+}
+
+img {
+  display: none;
+}
+
+.container-left-title {
+  margin-top: 20px;
+  color: var(--color-title);
+}
+
+.container-right {
+  background: var(--color-background);
+}
+
+.container-logo {
+  justify-content: center;
+  display: flex;
+  padding-top: 10px;
+}
+
+.register {
+  padding: 30px 0 30px 0;
+}
+
+.register form {
+  display: grid;
+  justify-content: center;
+}
+
+.button input,
+form input {
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+  border-radius: 5px;
+  height: 56px;
+  width: 400px;
+  background-color: #fff;
+  margin-bottom: 8px;
+}
+
+.button input {
+  justify-content: center;
+
+  display: flex;
+
+  align-items: center;
+
+  border-radius: 5px;
+  height: 56px;
+  width: 420px;
+  margin-bottom: 8px;
+  background-color: #202024;
+  color: #fff;
+}
+
+.register .button {
+  display: flex;
+  justify-content: center;
+}
+
+.list {
+  text-align: center;
+}
+
+.title {
+  padding: 30px;
+  display: grid;
+}
+
+.title span {
+  font-weight: 700;
+  color: var(--color-title);
+}
+
+.list-friends {
+  background: var(--color-list);
+  margin: auto 20px auto 20px;
+  width: 420px;
+  display: inline-block;
+  overflow-y: scroll;
+  max-height: 400px;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+  font-weight: 400;
+  display: contents;
+}
+
+ul li {
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-around;
+  border-bottom: 2px solid red;
+}
+
+ul li .card {
+  display: grid;
+  text-align: left;
+  margin: 10px auto 10px 10px;
+  width: 100%;
+}
+
+ul li .button {
+  display: flex;
+  margin: auto 10px auto 10px;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+}
+
+.list-friends .button input {
+  justify-content: center;
+
+  display: flex;
+  padding: 0px;
+  align-items: center;
+  border-radius: 5px;
+  height: 56px;
+  width: 100%;
+  margin-bottom: 8px;
+  background: var(--color-button-alert);
+  color: #fff;
+}
+
+.generator-button {
+  justify-content: center;
+  display: flex;
+}
+
+.generator-button input {
+  justify-content: center;
+
+  display: flex;
+
+  align-items: center;
+  padding-left: 12px;
+  border-radius: 5px;
+  height: 56px;
+  width: 420px;
+  margin-bottom: 8px;
+
+}
+
+@media (max-width: 500px) {
+  .register form {
+    justify-content: center;
+  }
+  .list-friends {
+    width: 320px;
+    margin: 0 20px 0 20px;
+
+    display: inline-block;
+  }
+  .button input{
+    width: 320px;
+  }
+
+  form input {
+    width: 300px;
+  }
+  .generator-button input {
+    width: 320px;
+  }
+  ul li {
+    display: block;
+
+  }
+  ul li .button {
+    width: 90%;
+    margin: 0 10px 0 10px;
+    display: inline-block;
+  }
+}
+
+@media (min-width: 1000px) {
+  #box {
+    display: flex;
+    /* background-image: url("../../assets/imgs/background-1200x800.jpg"); */
+    background: var(--color-background);
+    /* background-repeat: repeat; */
+  }
+  .container-left {
+    flex: 3;
+    height: 100vh;
+  }
+  .container-right {
+    flex: 1;
+    height: 100vh;
+  }
+
+  img {
+    display: block;
+  }
+
+  .register {
+    margin: auto;
+  }
+}

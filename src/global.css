@@ -1,0 +1,16 @@
+:root{
+  --color-background:	#045585;
+  --color-list:	#8f9b9b;
+  --color-title:	#FFF;
+  --color-button-alert: #921919;
+}
+
+*{
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+
+}
+#box {
+  margin: 0;
+}
