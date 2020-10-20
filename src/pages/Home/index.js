@@ -24,7 +24,7 @@ export default function Home() {
   };
 
   const createSecretFriend = async () => {
-    if (name.length === 0) {
+    if (name.length === 0 || email.length === 0) {
       setCreateError("Preencha todos os campos!");
     } else {
       const response = await api.post("/create-user", {
@@ -52,7 +52,6 @@ export default function Home() {
     const response = await api.delete(`/delete-user?id=${_id}`);
     // console.log(response.data);
     if (response.data.error === false) {
-
       const newData = data.filter((item) => item._id !== _id);
       // console.log(newData);
       setData(response.data.info);
